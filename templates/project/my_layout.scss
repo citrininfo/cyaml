@@ -1,0 +1,11 @@
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import "cyaml/core/base";
+
+/* import screen layout | Screen-Layout einbinden */
+@import "cyaml/navigation/nav_shinybuttons";
+
+@import "cyaml/screen/content";
+
+/* import print layout | Druck-Layout einbinden */
+@import "cyaml/print/print_draft";

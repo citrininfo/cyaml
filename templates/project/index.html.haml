@@ -1,0 +1,49 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title Your Page Title
+    / (en) Add your meta data here
+    / (de) Fügen Sie hier Ihre Meta-Daten ein
+    %head
+      %link{:href => "./stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}
+      /[if IE]                                                                   
+        %link{:href => "./stylesheets/ie.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    / skip link navigation
+    %ul#skiplinks
+      %li
+        %a.skip{:href => "#nav"} Skip to navigation (Press Enter).
+      %li
+        %a.skip{:href => "#col3"} Skip to main content (Press Enter).
+    .page_margins
+      .page
+        #header{:role => "banner"}
+          #topnav{:role => "contentinfo"}
+            %span #topnav is here
+          %h1 H1 Heading
+        #nav{:role => "navigation"}
+          .hlist
+            %ul
+              %li.active
+                %a{:href => "#"} Button 1
+              %li
+                %a{:href => "#"} Button 2
+              %li
+                %a{:href => "#"} Button 3
+              %li
+                %a{:href => "#"} Button 4
+              %li
+                %a{:href => "#"} Button 5
+        #main
+          #col1{:role => "complementary"}
+            #col1_content.clearfix
+          #col2{:role => "complementary"}
+            #col2_content.clearfix
+          #col3{:role => "main"}
+            #col3_content.clearfix
+            #ie_clearing &nbsp;
+        #footer{:role => "contentinfo"}
+          Layout based on
+          %a{:href => "http://www.yaml.de/"} YAML
+    %script{:src => "/yaml/core/js/webkit-focusfix.js", :type => "text/javascript"}
