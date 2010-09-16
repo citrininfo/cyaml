@@ -44,4 +44,6 @@ $ compass create my_project -r cyaml -u cyaml --javascripts-dir js --css-dir css
 welcome_message %Q{
 You've installed CYAML. Good for you!
 
+Now you should create a project.scss file where your Project specific CSS-rules and imports go.
+
 }
