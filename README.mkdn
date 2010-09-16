@@ -1,0 +1,15 @@
+Compass YAML
+============
+
+The YAML Framework converted to SASS and implemented as compass extension
+
+Installation
+============
+
+From the command line:
+
+    sudo gem install yaml
+
+    Or create a new project:
+
+        compass -r yaml -f yaml project_directory
