@@ -1,6 +1,5 @@
 description "Compass extention for HTML5 Boilerplate located at http://html5boilerplate.com"
 
-stylesheet 'my_layout.scss', :media => 'screen, projection'
 stylesheet 'basemod.scss', :media => 'all'
 stylesheet 'patch_my_layout.scss', :media => 'screen, projection'
 html 'index.html.haml'
