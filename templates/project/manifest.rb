@@ -16,8 +16,9 @@ image 'images/vlist/square/node_plus.gif', :to => 'vlist/square/node_plus.gif'
 image 'images/vlist/square/subnode.gif', :to => 'vlist/square/subnode.gif'
 image 'images/vlist/square/subnode_minus.gif', :to => 'vlist/square/subnode_minus.gif'
 image 'images/vlist/square/subnode_plus.gif', :to => 'vlist/square/subnode_plus.gif'
+file 'config.scss', :to =>'.config.scss'
+file 'basemod.scss', :to =>'.basemod.scss'
 stylesheet 'default_includes.scss'
-stylesheet 'basemod.scss', :media => 'all'
 stylesheet 'patch_my_layout.scss', :media => 'screen, projection'
 
 if Compass.configuration.project_type == :rails

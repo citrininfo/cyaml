@@ -1,17 +1,6 @@
 @charset "UTF-8";
 
-$layout_width:          1000px;
-$layout_max_width:      $layout_width;
-$layout_min_width:      $layout_width;
-$display_3rd_column:    none; /* (none|block) */
-$header_height:         200px;
-$content_height:        auto;
-$footer_height:         50px;
-$width_c1:              25%;
-$width_c2:              50%;
-$width_c3:              auto;
-$yaml_img_dir:          "/images";
-
+@import "config";
 @import "default_includes";
 
 /**
@@ -35,7 +24,7 @@ $yaml_img_dir:          "/images";
    */
   body {
     overflow-y: scroll;
-    background: #4d87c7 url("images/bg_blue.gif") repeat-x top left fixed;
+    background: #4d87c7 repeat-x top left fixed;
     padding: 10px 0; }
   /*-------------------------------------------------------------------------*/
   /* (en) Marginal areas & page background */
@@ -82,13 +71,13 @@ $yaml_img_dir:          "/images";
     width: $width_c1;
     margin: 0; }
   #col2 {
-    float: left;
+    float: right;
     width: $width_c2;
+    display: $display_3rd_column;
     margin: 0; }
   #col3 {
     width: $width_c3;
     margin: 0 0 0 75%;
-    display: $display_3rd_column;
   }
   #col1_content {
     padding: 0 10px 0 20px; }
