@@ -8,8 +8,8 @@ Installation
 
 From the command line:
 
-    sudo gem install yaml
+    sudo gem install cyaml
 
     Or create a new project:
 
-        compass -r yaml -f yaml project_directory
+        compass projectname -r cyaml -f cyaml
