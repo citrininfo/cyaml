@@ -16,6 +16,7 @@ image 'images/vlist/square/node_plus.gif', :to => 'vlist/square/node_plus.gif'
 image 'images/vlist/square/subnode.gif', :to => 'vlist/square/subnode.gif'
 image 'images/vlist/square/subnode_minus.gif', :to => 'vlist/square/subnode_minus.gif'
 image 'images/vlist/square/subnode_plus.gif', :to => 'vlist/square/subnode_plus.gif'
+stylesheet 'default_includes.scss'
 stylesheet 'basemod.scss', :media => 'all'
 stylesheet 'patch_my_layout.scss', :media => 'screen, projection'
 
@@ -37,13 +38,13 @@ $ compass init rails -r cyaml -u cyaml --force
 Stand Alone Installation
 ========================
 $ gem install cyaml
-$ compass create my_project -r cyaml -u cyaml --javascripts-dir js --css-dir css
+$ compass create my_project -r cyaml -u cyaml
 
 }
 
 welcome_message %Q{
 You've installed CYAML. Good for you!
 
-Now you should create a project.scss file where your Project specific CSS-rules and imports go.
+All project specific changes should be made in basemod.scss.
 
 }
