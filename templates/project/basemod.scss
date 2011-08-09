@@ -4,39 +4,18 @@
 @import "default_includes";
 
 /**
- * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
- * (en) stylesheet for screen layout
- * (de) Stylesheet für das Bildschirm-Layout
- *
- * @creator       YAML Builder V1.2 (http://builder.yaml.de)
- * @file          basemod.css
- * @-yaml-minver  3.2
+  Template for creating a YAML Layout.
  */
 
-  /** 
-   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
-   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
-   *
-   * @workaround
-   * @affected IE8, FF, Webkit, Opera
-   * @css-for all
-   * @valid CSS3
-   */
   body {
     overflow-y: scroll;
-    background: #4d87c7 repeat-x top left fixed;
     padding: 10px 0; }
-  /*-------------------------------------------------------------------------*/
-  /* (en) Marginal areas & page background */
-  /* (de) Randbereiche & Seitenhintergrund */
-  /* Layout Alignment | Layout-Ausrichtung */
   .page_margins {
     margin: 0 auto;
     width: auto;
     min-width: $layout_min_width;
     max-width: $layout_max_width;
     background: #fff; }
-  /* Layout Properties | Layout-Eigenschaften */
   .page {
     padding: 10px; }
   #header {
@@ -57,15 +36,8 @@
     height: $footer_height;
     background: #f9f9f9;
     border-top: 5px #efefef solid; }
-  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
   #nav ul {
     margin-left: 20px; }
-  /*-------------------------------------------------------------------------*/
-  /**
-   * (en) Formatting content container
-   * (de) Formatierung der Inhalts-Container
-   *
-   */
   #col1 {
     float: left;
     width: $width_c1;
@@ -86,3 +58,10 @@
   #col3_content {
     padding: 0 20px 0 10px; }
 
+  #skiplinks a.skip {
+    &:focus, &:active {
+      color: #fff;
+      background: #333;
+      border-bottom: 1px #000 solid;
+      padding: 10px 0;
+      text-decoration: none; } }

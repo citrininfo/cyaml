@@ -1,0 +1,118 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) YAML-Addon:Microformats Support
+ * (de) YAML-Addon:Unterstützung für Microformate
+ *
+ * @note            Many thanks to Michael Jendryschik (http://jendryschik.de/) for contribution
+ *
+ * @copyright       Copyright 2005-2011, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3.1
+ * @revision        $Revision:392 $
+ * @lastmodified    $Date:2009-07-05 12:18:40 +0200 (So, 05. Jul 2009) $
+ */
+
+/* hCards + hCalendars */
+
+.vcard, .vevent {
+  border: 2px solid #e0e7b8 !important;
+  padding: 30px 5px 5px 5px !important;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  margin: 5px 0 !important;
+  /* small IE-Fix for background images */
+  zoom: 1; }
+
+span {
+  &.vcard, &.vevent {
+    padding: 2px 1px 2px 70px !important;
+    margin: 0 2px 0 !important; } }
+
+.vcard {
+  background: #f8f8ec inline-image("add-ons/microformats/hcard.png", 'image/png') 5px 5px no-repeat !important;
+  a {
+    padding-left: 11px;
+    background: inline-image("add-ons/microformats/external_link.png", 'image/png') top left no-repeat;
+    color: #679A06; }
+  .adr {
+    display: block;
+    margin: 0.5em 0; }
+  .email {
+    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier; } }
+
+.vevent {
+  background: #f8f8ec inline-image("add-ons/microformats/hcalendar.png", 'image/png') 5px 5px no-repeat !important;
+  a {
+    padding-left: 11px;
+    background: inline-image("add-ons/microformats/external_link.png", 'image/png') top left no-repeat;
+    color: #679A06; }
+  p {
+    margin-bottom: 0.5em; }
+  .description {
+    display: block;
+    margin-top: 1em; }
+  .location {
+    display: block;
+    color: #679A06; }
+  .summary {
+    display: block;
+    color: #679A06;
+    font-weight: bold; } }
+
+/* XFN relationship */
+
+a {
+  &.xfnRelationship {
+    padding-right: 26px;
+    background: inline-image("add-ons/microformats/xfn/xfn-small.png", 'image/png') no-repeat right;
+    &[rel~="colleague"], &[rel~="co-worker"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-colleague.png", 'image/png')  no-repeat right; }
+    &[rel~="met"] {
+      padding-right: 32px;
+      background: inline-image("add-ons/microformats/icon-xfn.png", 'image/png') no-repeat right; }
+    &[rel~="colleague"][rel~="met"], &[rel~="co-worker"][rel~="met"] {
+      padding-right: 26px;
+      background: inline-image("add-ons/microformats/xfn/xfn-colleague-met.png", 'image/png')  no-repeat right; }
+    &[rel~="friend"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-friend.png", 'image/png') no-repeat right;
+      &[rel~="met"] {
+        padding-right: 26px;
+        background: inline-image("add-ons/microformats/xfn/xfn-friend-met.png", 'image/png') no-repeat right; } }
+    &[rel~="sweetheart"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-sweetheart.png", 'image/png') no-repeat right;
+      &[rel~="met"] {
+        padding-right: 26px;
+        background: inline-image("add-ons/microformats/xfn/xfn-sweetheart-met.png", 'image/png') no-repeat right; } }
+    &[rel~="child"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-child.png", 'image/png') no-repeat right; }
+    &[rel~="parent"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-parent.png", 'image/png') no-repeat right; }
+    &[rel~="spouse"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-spouse.png", 'image/png') no-repeat right; }
+    &[rel~="me"] {
+      padding-right: 21px;
+      background: inline-image("add-ons/microformats/xfn/xfn-me.png", 'image/png') no-repeat right; } }
+  &[rel~="tag"] {
+    padding-right: 32px;
+    background: inline-image("add-ons/microformats/icon-rel-tag.png", 'image/png') no-repeat right; } }
+
+/* rel-tag */
+
+/* geo */
+
+abbr[class~="geo"] {
+  padding-right: 32px;
+  background: inline-image("add-ons/microformats/icon-geo.png", 'image/png') no-repeat right;
+  border: none;
+  cursor: default; }

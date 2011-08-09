@@ -2,13 +2,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
   s.version = "0.0.33"
-  s.date = "2011-07-27"
+  s.date = "2011-08-09"
 
   # Gem Details
   s.name = "cyaml"
   s.authors = ["Michael Gerber"]
   s.summary = %q{the yaml framework as compass gem}
-  s.description = %q{the yaml framework as compass gem}
+  s.description = %q{the YAML Framework ( http://www.yaml.de/ ) as compass gem. https://github.com/servasat/cyaml}
   s.email = "mike@citrin.ch"
   s.homepage = "http://www.citrin.ch/"
 

@@ -1,21 +1,6 @@
-description "Compass extention for HTML5 Boilerplate located at http://html5boilerplate.com"
+description "Compass extention for YAML Framework http://www.yaml.de"
 
-image 'images/shiny_buttons/background_active.png', :to => 'shiny_buttons/background_active.png'
-image 'images/shiny_buttons/background_active.png', :to => 'shiny_buttons/background.png'
-image 'images/button_gray.png', :to => 'shiny_buttons/button_gray.png'
-image 'images/button_red.png', :to => 'shiny_buttons/button_red.png'
-image 'images/button_yellow.png', :to => 'shiny_buttons/button_yellow.png'
-image 'images/sliding_door/round/bg.gif', :to => 'sliding_door/round/bg.gif'
-image 'images/sliding_door/round/left.png', :to => 'sliding_door/round/left.png'
-image 'images/sliding_door/round/left_on.png', :to => 'sliding_door/round/left_on.png'
-image 'images/sliding_door/round/right_on.png', :to => 'sliding_door/round/right_on.png'
-image 'images/sliding_door/round/right.png', :to => 'sliding_door/round/right.png'
-image 'images/vlist/square/node.gif', :to => 'vlist/square/node.gif'
-image 'images/vlist/square/node_minus.gif', :to => 'vlist/square/node_minus.gif'
-image 'images/vlist/square/node_plus.gif', :to => 'vlist/square/node_plus.gif'
-image 'images/vlist/square/subnode.gif', :to => 'vlist/square/subnode.gif'
-image 'images/vlist/square/subnode_minus.gif', :to => 'vlist/square/subnode_minus.gif'
-image 'images/vlist/square/subnode_plus.gif', :to => 'vlist/square/subnode_plus.gif'
+discover :images
 file 'config.scss', :to =>'.config.scss'
 file 'basemod.scss', :to =>'.basemod.scss'
 stylesheet 'default_includes.scss'
@@ -28,7 +13,9 @@ else
   html 'citrin.html.haml'
 end
 help %Q{
-This is a Compass extention for CYAML by Michael Gerber
+This is a Compass extension for the YAML Framework. It's written and maintained by Michael Gerber.
+
+https://github.com/servasat/cyaml
 
 Rails Installation
 ========================
@@ -39,13 +26,13 @@ $ compass init rails -r cyaml -u cyaml --force
 Stand Alone Installation
 ========================
 $ gem install cyaml
-$ compass create my_project -r cyaml -u cyaml
+$ compass create -r cyaml --using cyaml my_project
 
 }
 
 welcome_message %Q{
-You've installed CYAML. Good for you!
+You've installed CYAML. Read the Documentation at https://github.com/servasat/cyaml
 
-All project specific changes should be made in basemod.scss.
+Please remember: all project specific changes should be made in basemod.scss.
 
 }

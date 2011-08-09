@@ -3,6 +3,8 @@ Compass YAML
 
 The YAML Framework converted to SASS and implemented as compass extension
 
+Documentation: https://github.com/servasat/cyaml
+
 Installation
 ============
 
@@ -10,6 +12,11 @@ From the command line:
 
     sudo gem install cyaml
 
-    Or create a new project:
+Create Compass project
 
-        compass projectname -r cyaml -f cyaml
+     compass create -r cyaml --using cyaml my_project
+
+Use inside Rails project
+
+     cd my_rails_project
+     compass init rails -r cyaml -u cyaml --force
