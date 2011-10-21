@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.34"
-  s.date = "2011-08-09"
+  s.version = "0.0.35"
+  s.date = "2011-10-21"
 
   # Gem Details
   s.name = "cyaml"
