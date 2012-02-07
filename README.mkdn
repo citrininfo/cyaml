@@ -3,7 +3,7 @@ Compass YAML
 
 The YAML Framework converted to SASS and implemented as compass extension
 
-Documentation: https://github.com/servasat/cyaml
+Documentation: https://github.com/firemind/cyaml
 
 Installation
 ============

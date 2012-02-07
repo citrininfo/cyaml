@@ -15,7 +15,7 @@ end
 help %Q{
 This is a Compass extension for the YAML Framework. It's written and maintained by Michael Gerber.
 
-https://github.com/servasat/cyaml
+https://github.com/firemind/cyaml
 
 Rails Installation
 ========================
@@ -31,7 +31,7 @@ $ compass create -r cyaml --using cyaml my_project
 }
 
 welcome_message %Q{
-You've installed CYAML. Read the Documentation at https://github.com/servasat/cyaml
+You've installed CYAML. Read the Documentation at https://github.com/firemind/cyaml
 
 Please remember: all project specific changes should be made in basemod.scss.
 

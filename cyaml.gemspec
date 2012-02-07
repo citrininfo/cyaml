@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name = "cyaml"
   s.authors = ["Michael Gerber"]
   s.summary = %q{the yaml framework as compass gem}
-  s.description = %q{the YAML Framework ( http://www.yaml.de/ ) as compass gem. https://github.com/servasat/cyaml}
+  s.description = %q{the YAML Framework ( http://www.yaml.de/ ) as compass gem. https://github.com/firemind/cyaml}
   s.email = "mike@citrin.ch"
   s.homepage = "http://www.citrin.ch/"
 
