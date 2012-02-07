@@ -1,51 +1,71 @@
 !!!
-%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+%html{:lang => "en"}
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
-    %title Your Page Title
-    = stylesheet_link_tag 'basemod.css', :media => 'all'
-    /[if IE]
-      = stylesheet_link_tag 'patch_my_layout.css', :media => 'screen, projection'
-  %body
-    .page_margins
-      / start: skip link navigation
-      %a.skip{:href => "#navigation", :title => "skip link"} Skip to the navigation
-      %span.hideme .
-      %a.skip{:href => "#content", :title => "skip link"} Skip to the content
-      %span.hideme .
-      / end: skip link navigation
-      .page
-        #header
-        #nav
-          / skiplink anchor: navigation
-          %a#navigation{:name => "navigation"}
-          .hlist
-            / main navigation: horizontal list
-            %ul
-              %li.active
-                %strong Button 1
-              %li
-                %a{:href => "#"} Button 2
-              %li
-                %a{:href => "#"} Button 3
-              %li
-                %a{:href => "#"} Button 4
-              %li
-                %a{:href => "#"} Button 5
+    %meta{:charset => "utf-8"}/
+    %title Demo: Flexible Column Layout &ndash; YAML CSS Framework
+    / Mobile viewport optimisation
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / (en) Add your meta data here
+    / (de) Fuegen Sie hier ihre Meta-Daten ein
+    /[if lte IE 7]
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  %body.demo-2col
+    %ul.ym-skiplinks
+      %li
+        %a.ym-skip{:href => "#nav"} Skip to navigation (Press Enter)
+      %li
+        %a.ym-skip{:href => "#main"} Skip to main content (Press Enter)
+    .ym-wrapper
+      .ym-wbox
+        %header
+        %h1 Project Name
+        </header>
+        %nav#nav
+        .ym-hlist
+          %ul
+            %li.active
+              %strong Active
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+          %form.ym-searchform
+            %input.ym-searchfield{:placeholder => "Search...", :type => "search"}/
+            %input.ym-searchbutton{:type => "submit", :value => "Search"}/
+        </nav>
         #main
-          #col1
-            #col1_content.clearfix
-              / add your content here
-          #col2
-            #col2_content.clearfix
-              / add your content here
-              = yield
-          #col3
-            #col3_content.clearfix
-              / add your content here
-            / IE Column Clearing
-            #ie_clearing  
-        / begin: #footer
-        #footer
-          Layout based on
-          %a{:href => "http://www.yaml.de/"} YAML
+          .ym-column.linearize-level-1
+            .ym-col1
+              .ym-cbox
+            %aside.ym-col3
+            .ym-cbox
+              %h2 Sidebar
+              %h4 Widget A
+              %ul
+                %li Item 1
+                %li Item 2
+                %li Item 3
+                %li Item 4
+                %li Item 5
+              %h4 Widget B
+              %ul
+                %li Item 1
+                %li Item 2
+                %li Item 3
+              %h4 Widget C
+              %ul
+                %li Item 1
+                %li Item 2
+                %li Item 3
+            </aside>
+        %footer
+        %p
+          © Company 2011 &ndash; Layout based on
+          %a{:href => "http://www.yaml.de"} YAML
+        </footer>
+    / full skip link functionality in webkit browsers

@@ -7,9 +7,9 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     / (en) Add your meta data here
     / (de) Fuegen Sie hier ihre Meta-Daten ein
-    %link{:href => "./stylesheets/basemod.css", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag 'basemod.css', :media => 'all'
     /[if lte IE 7]
-      <link href="./stylesheets/iehacks.css" rel="stylesheet" type="text/css" />
+      = stylesheet_link_tag 'iehacks.css', :media => 'all'
     /[if lt IE 9]
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   %body.demo-2col
@@ -42,6 +42,7 @@
           .ym-column.linearize-level-1
             .ym-col1
               .ym-cbox
+                = yield
                 %section.box.info
                   %h2 Main Content
                   %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -93,4 +94,4 @@
             © Company 2011 &ndash; Layout based on
             %a{:href => "http://www.yaml.de"} YAML
     / full skip link functionality in webkit browsers
-    %script{:src => "../yaml/core/js/yaml-focusfix.js"}
+    %script{:src => "/javascripts/yaml/core/yaml-focusfix.js"}

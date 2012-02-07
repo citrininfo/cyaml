@@ -1,67 +1,11 @@
-@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Droid+Sans:700);
 
-@import "config";
 @import "default_includes";
 
-/**
-  Template for creating a YAML Layout.
- */
+@import "cyaml/navigation/hlist";
 
-  body {
-    overflow-y: scroll;
-    padding: 10px 0; }
-  .page_margins {
-    margin: 0 auto;
-    width: auto;
-    min-width: $layout_min_width;
-    max-width: $layout_max_width;
-    background: #fff; }
-  .page {
-    padding: 10px; }
-  #header {
-    padding: 45px 2em 1em 20px;
-    height: $header_height;
-    color: #000;
-    background: #fff; }
-  #nav {
-    overflow: hidden; }
-  div.hlist {}
-  #main {
-    margin: 10px 0;
-    height: $content_height;
-    background: #fff; }
-  #footer {
-    padding: 10px 20px;
-    color: #666;
-    height: $footer_height;
-    background: #f9f9f9;
-    border-top: 5px #efefef solid; }
-  #nav ul {
-    margin-left: 20px; }
-  #col1 {
-    float: left;
-    width: $width_c1;
-    margin: 0; }
-  #col2 {
-    float: right;
-    width: $width_c2;
-    display: $display_3rd_column;
-    margin: 0; }
-  #col3 {
-    width: $width_c3;
-    margin: 0 0 0 75%;
-  }
-  #col1_content {
-    padding: 0 10px 0 20px; }
-  #col2_content {
-    padding: 0 10px; }
-  #col3_content {
-    padding: 0 20px 0 10px; }
+@import "cyaml/forms/gray-theme";
 
-  #skiplinks a.skip {
-    &:focus, &:active {
-      color: #fff;
-      background: #333;
-      border-bottom: 1px #000 solid;
-      padding: 10px 0;
-      text-decoration: none; } }
+@import "cyaml/screen/typography";
+
+@import "cyaml/screen/screen-PAGE-layout";

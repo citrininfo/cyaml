@@ -1,16 +1,15 @@
 description "Compass extention for YAML Framework http://www.yaml.de"
 
 discover :images
-file 'config.scss', :to =>'.config.scss'
-file 'basemod.scss', :to =>'.basemod.scss'
+discover :javascripts
+file 'config.scss', :to =>'config.scss'
+file 'basemod.scss', :to =>'basemod.scss'
 stylesheet 'default_includes.scss'
-stylesheet 'patch_my_layout.scss', :media => 'screen, projection'
 
 if Compass.configuration.project_type == :rails
   file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
 else
   html 'index.html.haml'
-  html 'citrin.html.haml'
 end
 help %Q{
 This is a Compass extension for the YAML Framework. It's written and maintained by Michael Gerber.
