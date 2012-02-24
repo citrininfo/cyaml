@@ -1,0 +1,9 @@
+# A sample Gemfile
+source "http://rubygems.org"
+
+  gem 'guard-livereload'
+  gem 'guard-compass'
+  gem 'guard-haml'
+  # gem 'guard-coffeescript'
+  # gem 'rack-livereload'
+# gem "rails"
