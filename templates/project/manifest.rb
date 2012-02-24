@@ -4,12 +4,17 @@ discover :images
 discover :javascripts
 file 'config.scss', :to =>'config.scss'
 file 'basemod.scss', :to =>'basemod.scss'
+file 'custom.scss', :to =>'custom.scss'
+file 'Guardfile', :to =>'Guardfile'
+file 'index.html.haml', :to=>'index.html.haml'
+
 stylesheet 'default_includes.scss'
 
 if Compass.configuration.project_type == :rails
   file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
 else
   html 'index.html.haml'
+  file 'Gemfile', :to =>'Gemfile'
 end
 help %Q{
 This is a Compass extension for the YAML Framework. It's written and maintained by Michael Gerber.

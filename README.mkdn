@@ -20,3 +20,10 @@ Use inside Rails project
 
      cd my_rails_project
      compass init rails -r cyaml -u cyaml --force
+
+
+Getting started
+===============
+     guard start      (using livereload)
+    
+    
