@@ -2,12 +2,17 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
-    %title Demo: Flexible Column Layout &ndash; YAML CSS Framework
+    %title
+      = yield(:title)
     / Mobile viewport optimisation
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     / (en) Add your meta data here
     / (de) Fuegen Sie hier ihre Meta-Daten ein
+    %link{:href => "./stylesheets/custom.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:type=>'text/javascript', :src=>"https://github.com/livereload/livereload-js/raw/master/dist/livereload.js?host=localhost"}
+
     /[if lte IE 7]
+      <link href="./stylesheets/iehacks.css" rel="stylesheet" type="text/css" />
     /[if lt IE 9]
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   %body.demo-2col
@@ -19,53 +24,52 @@
     .ym-wrapper
       .ym-wbox
         %header
-        %h1 Project Name
-        </header>
+          %h1 Project Name
         %nav#nav
-        .ym-hlist
-          %ul
-            %li.active
-              %strong Active
-            %li
-              %a{:href => "#"} Link
-            %li
-              %a{:href => "#"} Link
-            %li
-              %a{:href => "#"} Link
-            %li
-              %a{:href => "#"} Link
-          %form.ym-searchform
-            %input.ym-searchfield{:placeholder => "Search...", :type => "search"}/
-            %input.ym-searchbutton{:type => "submit", :value => "Search"}/
-        </nav>
+          .ym-hlist
+            %ul
+              %li.active
+                %strong Active
+              %li
+                %a{:href => "#"} Link
+              %li
+                %a{:href => "#"} Link
+              %li
+                %a{:href => "#"} Link
+              %li
+                %a{:href => "#"} Link
+            %form.ym-searchform
+              %input.ym-searchfield{:placeholder => "Search...", :type => "search"}/
+              %input.ym-searchbutton{:type => "submit", :value => "Search"}/
         #main
           .ym-column.linearize-level-1
             .ym-col1
               .ym-cbox
+                %section.box.info
+                  = yield
             %aside.ym-col3
-            .ym-cbox
-              %h2 Sidebar
-              %h4 Widget A
-              %ul
-                %li Item 1
-                %li Item 2
-                %li Item 3
-                %li Item 4
-                %li Item 5
-              %h4 Widget B
-              %ul
-                %li Item 1
-                %li Item 2
-                %li Item 3
-              %h4 Widget C
-              %ul
-                %li Item 1
-                %li Item 2
-                %li Item 3
-            </aside>
+              .ym-cbox
+                %h2 Sidebar
+                %h4 Widget A
+                %ul
+                  %li Item 1
+                  %li Item 2
+                  %li Item 3
+                  %li Item 4
+                  %li Item 5
+                %h4 Widget B
+                %ul
+                  %li Item 1
+                  %li Item 2
+                  %li Item 3
+                %h4 Widget C
+                %ul
+                  %li Item 1
+                  %li Item 2
+                  %li Item 3
         %footer
-        %p
-          © Company 2011 &ndash; Layout based on
-          %a{:href => "http://www.yaml.de"} YAML
-        </footer>
+          %p
+            © Company 2011 &ndash; Layout based on
+            %a{:href => "http://www.yaml.de"} YAML
     / full skip link functionality in webkit browsers
+    %script{:src => "javascripts/yaml/core/yaml-focusfix.js"}

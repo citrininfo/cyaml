@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.44"
+  s.version = "0.0.45"
   s.date = "2012-02-24"
 
   # Gem Details
